@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+  
+<center class="container py-5">
+  <h2>Home</h2>
+  <p class="fs-4"><%= homeContent %></p>
+</center>
+
+
+<div class="container">
+    <% showPosts.forEach((currentPost) => { %>
+      <% const title = currentPost.title; %>
+      <% const post = currentPost.content; %>
+      <% const id = currentPost._id; %>
+
+      <div class="py-4">
+        <h3 class=""><%= title %></h3>
+        <p class="fs-5">
+          <%= post.substr(0, 300) %> ...
+          <a href="/posts/<%= id %>">Read more</a>
+        </p>
+      </div>   
+      
+    <% }) %>
+</div>
+
+
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/bp-admin" method="post" class="container py-5 gy-5 h-100">
+  <div class="mb-3 pt-5">
+    <label for="exampleFormControlInput1" class="form-label fs-5 fw-bold">Title</label>
+    <input type="text" class="form-control py-2 fs-5" id="exampleFormControlInput1" placeholder="Post Title" name="txtTitle">
+  </div>
+  <div class="mb-3 py-5">
+    <label for="exampleFormControlTextarea1" class="form-label fs-5 fw-bold">Write Blog</label>
+    <textarea class="form-control fs-5" id="exampleFormControlTextarea1" rows="8" name="txtPost"></textarea>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-dark py-3 px-2 fw-bold mb-3">Submit</button>
+  </div>
+</form>
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
